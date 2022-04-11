@@ -30,7 +30,7 @@ All user acocunts will have the default password of "password".
 
 ## Group Members:
 
-Hardi Patel - Responsible for Headers, About Me, And Contact Form Sections
-Mahshad Naghashan - Responsible for Skills, Projects, And Footer Sections
+1.Hardi Patel - Responsible for Headers, About Me, And Contact Form Sections 
+2.Mahshad Naghashan - Responsible for Skills, Projects, And Footer Sections
 Admin Page designed by Hardi
 Section Form Pages designed by Mahshad
