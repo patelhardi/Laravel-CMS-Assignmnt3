@@ -1,13 +1,18 @@
 # php-cms-laravel
 
-This repository is copy of the simple [PHP/Laravel CMS](https://github.com/codeadamca/php-cms-laravel) except the CMS views have been converted from vanilla PHP to Blade.
-
 A few notes regarding the CMS:
+
+Steps to working with this repo:
+1. Clone repo in your folder
+2. Create .env file in the folder
+3. Connect with your server
+4. Change database info in the .env file
 
 The CMS uses the public storage driver, make sure to update your .env file to:
 
 ```php
 FILESYSTEM_DRIVER=public
+APP_URL=http://localhost/
 ```
 
 The database setup includes migrations and seeding. Run the following command to initialize the database:
@@ -23,8 +28,9 @@ All user acocunts will have the default password of "password".
 * [Visual Studio Code](https://code.visualstudio.com/) or [Brackets](http://brackets.io/) (or any code editor)
 * [Laravel](https://laravel.com/)
 
-Full tutorial URL: https://codeadam.ca/learning/php-cms-laravel.html
+## Group Members:
 
-<a href="https://codeadam.ca">
-<img src="https://codeadam.ca/images/code-block.png" width="100">
-</a>
+Hardi Patel - Responsible for Headers, About Me, And Contact Form Sections
+Mahshad Naghashan - Responsible for Skills, Projects, And Footer Sections
+Admin Page designed by Hardi
+Section Form Pages designed by Mahshad
