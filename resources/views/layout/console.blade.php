@@ -8,11 +8,12 @@
 
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         <link rel="stylesheet" href="{{url('app.css')}}">
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
 
         <script src="{{url('app.js')}}"></script>
         
     </head>
-    <body>
+    <body style="font-family: 'Quicksand', sans-serif; background-color: aquamarine;">
 
         <header class="w3-padding">
 
