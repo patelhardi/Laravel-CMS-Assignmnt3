@@ -5,6 +5,7 @@ use App\Http\Controllers\ConsoleController;
 use App\Http\Controllers\ProjectsController;
 use App\Http\Controllers\TypesController;
 use App\Http\Controllers\UsersController;
+use App\Http\Controllers\HeadersController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -57,3 +58,10 @@ Route::post('/console/types/add', [TypesController::class, 'add'])->middleware('
 Route::get('/console/types/edit/{type:id}', [TypesController::class, 'editForm'])->where('type', '[0-9]+')->middleware('auth');
 Route::post('/console/types/edit/{type:id}', [TypesController::class, 'edit'])->where('type', '[0-9]+')->middleware('auth');
 Route::get('/console/types/delete/{type:id}', [TypesController::class, 'delete'])->where('type', '[0-9]+')->middleware('auth');
+
+Route::get('/console/headers/list', [HeadersController::class, 'list'])->middleware('auth');
+Route::get('/console/headers/add', [HeadersController::class, 'addForm'])->middleware('auth');
+Route::post('/console/headers/add', [HeadersController::class, 'add'])->middleware('auth');
+Route::get('/console/headers/edit/{header:id}', [HeadersController::class, 'editForm'])->where('header', '[0-9]+')->middleware('auth');
+Route::post('/console/headers/edit/{header:id}', [HeadersController::class, 'edit'])->where('header', '[0-9]+')->middleware('auth');
+Route::get('/console/headers/delete/{header:id}', [HeadersController::class, 'delete'])->where('header', '[0-9]+')->middleware('auth');

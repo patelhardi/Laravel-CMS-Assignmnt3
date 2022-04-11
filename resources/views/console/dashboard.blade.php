@@ -5,6 +5,7 @@
 <section class="w3-padding">
 
     <ul id="dashboard">
+    <li><a href="/console/headers/list">Manage Headers</a></li>
         <li><a href="/console/projects/list">Manage Projects</a></li>
         <li><a href="/console/types/list">Manage Types</a></li>
         <li><a href="/console/users/list">Manage Users</a></li>
