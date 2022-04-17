@@ -18,6 +18,7 @@ APP_URL=http://localhost/
 The database setup includes migrations and seeding. Run the following command to initialize the database:
 
 ```
+php artisan key:generate
 php artisan migrate:refresh --seed
 ```
 
