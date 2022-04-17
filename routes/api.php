@@ -7,6 +7,7 @@ use App\Models\Type;
 use App\Models\Project;
 use App\Models\User;
 use App\Models\Header;
+use App\Models\About;
 
 /*
 |--------------------------------------------------------------------------
@@ -63,4 +64,20 @@ Route::get('/headers', function(){
     dd($headers);
 
     return $headers;
+});
+
+Route::get('/abouts', function(){
+    $abouts = About::all();
+    foreach($abouts as $key => $about)
+    {
+        $abouts[$key]['user'] = User::where('id', $about['user_id'])->first();
+        
+        if($about['image'])
+        {
+            $abouts[$key]['image'] = env('APP_URL').'storage/'.$abouts[$key]['image'];
+        }
+        
+    }
+    dd($abouts);
+    return $abouts;
 });

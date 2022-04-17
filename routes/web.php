@@ -6,6 +6,7 @@ use App\Http\Controllers\ProjectsController;
 use App\Http\Controllers\TypesController;
 use App\Http\Controllers\UsersController;
 use App\Http\Controllers\HeadersController;
+use App\Http\Controllers\AboutsController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -65,3 +66,9 @@ Route::post('/console/headers/add', [HeadersController::class, 'add'])->middlewa
 Route::get('/console/headers/edit/{header:id}', [HeadersController::class, 'editForm'])->where('header', '[0-9]+')->middleware('auth');
 Route::post('/console/headers/edit/{header:id}', [HeadersController::class, 'edit'])->where('header', '[0-9]+')->middleware('auth');
 Route::get('/console/headers/delete/{header:id}', [HeadersController::class, 'delete'])->where('header', '[0-9]+')->middleware('auth');
+
+Route::get('/console/abouts/list', [AboutsController::class, 'list'])->middleware('auth');
+Route::get('/console/abouts/edit/{about:id}', [AboutsController::class, 'editForm'])->where('about', '[0-9]+')->middleware('auth');
+Route::post('/console/abouts/edit/{about:id}', [AboutsController::class, 'edit'])->where('about', '[0-9]+')->middleware('auth');
+Route::get('/console/abouts/image/{about:id}', [AboutsController::class, 'imageForm'])->where('about', '[0-9]+')->middleware('auth');
+Route::post('/console/abouts/image/{about:id}', [AboutsController::class, 'image'])->where('about', '[0-9]+')->middleware('auth');
