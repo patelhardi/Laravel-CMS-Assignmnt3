@@ -14,6 +14,11 @@ The CMS uses the public storage driver, make sure to update your .env file to:
 FILESYSTEM_DRIVER=public
 APP_URL=http://localhost/
 ```
+For set image folder storage link:
+
+```
+php artisan storage:link
+```
 
 The database setup includes migrations and seeding. Run the following command to initialize the database:
 
