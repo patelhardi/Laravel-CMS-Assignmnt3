@@ -7,6 +7,7 @@ use App\Http\Controllers\TypesController;
 use App\Http\Controllers\UsersController;
 use App\Http\Controllers\HeadersController;
 use App\Http\Controllers\AboutsController;
+use App\Http\Controllers\ContactsController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -72,3 +73,7 @@ Route::get('/console/abouts/edit/{about:id}', [AboutsController::class, 'editFor
 Route::post('/console/abouts/edit/{about:id}', [AboutsController::class, 'edit'])->where('about', '[0-9]+')->middleware('auth');
 Route::get('/console/abouts/image/{about:id}', [AboutsController::class, 'imageForm'])->where('about', '[0-9]+')->middleware('auth');
 Route::post('/console/abouts/image/{about:id}', [AboutsController::class, 'image'])->where('about', '[0-9]+')->middleware('auth');
+
+Route::get('/console/contacts/list', [ContactsController::class, 'list'])->middleware('auth');
+Route::get('/console/contacts/edit/{contact:id}', [ContactsController::class, 'editForm'])->where('contact', '[0-9]+')->middleware('auth');
+Route::post('/console/contacts/edit/{contact:id}', [ContactsController::class, 'edit'])->where('contact', '[0-9]+')->middleware('auth');

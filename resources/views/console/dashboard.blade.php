@@ -15,6 +15,9 @@
             <a href="/console/projects/list">Manage Projects</a>
         </div>
         <div class="w3-container w3-teal w3-column w3-margin w3-padding" style="height: 80px; width: 150px; float: left; text-align: center;">
+            <a href="/console/contacts/list">Manage Contact Me</a>
+        </div>
+        <div class="w3-container w3-teal w3-column w3-margin w3-padding" style="height: 80px; width: 150px; float: left; text-align: center;">
             <a href="/console/types/list">Manage Types</a>
         </div>
         <div class="w3-container w3-teal w3-column w3-margin w3-padding" style="height: 80px; width: 150px; float: left; text-align: center;">

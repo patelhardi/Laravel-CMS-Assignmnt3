@@ -8,6 +8,7 @@ use App\Models\Project;
 use App\Models\User;
 use App\Models\Header;
 use App\Models\About;
+use App\Models\Contact;
 
 /*
 |--------------------------------------------------------------------------
@@ -80,4 +81,11 @@ Route::get('/abouts', function(){
     }
     dd($abouts);
     return $abouts;
+});
+
+Route::get('/contacts', function(){
+    $contacts = Contact::all();
+    dd($contacts);
+
+    return $contacts;
 });
