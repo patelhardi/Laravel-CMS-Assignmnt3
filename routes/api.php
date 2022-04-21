@@ -85,7 +85,7 @@ Route::get('/abouts', function(){
 
 Route::get('/contacts', function(){
     $contacts = Contact::all();
-    dd($contacts);
+    //dd($contacts);
 
     return $contacts;
 });
