@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 use App\Models\Type;
+use App\Models\Skill;
 use App\Models\Project;
 use App\Models\User;
 use App\Models\Header;
@@ -63,4 +64,20 @@ Route::get('/headers', function(){
     dd($headers);
 
     return $headers;
+});
+
+Route::get('/skills', function(){
+    $skills = Skill::all();
+    foreach($skills as $key => $skill)
+    {
+        $skills[$key]['user'] = User::where('id', $skill['user_id'])->first();
+        
+        if($skill['image'])
+        {
+            $skills[$key]['image'] = env('APP_URL').'storage/'.$skills[$key]['image'];
+        }
+        
+    }
+    dd($skills);
+    return $skills;
 });

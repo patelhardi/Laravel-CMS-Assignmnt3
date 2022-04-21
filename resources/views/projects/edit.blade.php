@@ -11,7 +11,7 @@
         @csrf
 
         <div class="w3-margin-bottom">
-            <label for="title">Title:</label>
+            <label for="title" style="padding-right: 60px">Title:</label>
             <input type="title" name="title" id="title" value="{{old('title', $project->title)}}" required>
             
             @if ($errors->first('title'))
@@ -20,28 +20,8 @@
             @endif
         </div>
 
-        <div class="w3-margin-bottom">
-            <label for="url">URL:</label>
-            <input type="url" name="url" id="url" value="{{old('url', $project->url)}}">
-
-            @if ($errors->first('url'))
-                <br>
-                <span class="w3-text-red">{{$errors->first('url')}}</span>
-            @endif
-        </div>
-
-        <div class="w3-margin-bottom">
-            <label for="slug">Slug:</label>
-            <input type="text" name="slug" id="slug" value="{{old('slug', $project->slug)}}" required>
-
-            @if ($errors->first('slug'))
-                <br>
-                <span class="w3-text-red">{{$errors->first('slug')}}</span>
-            @endif
-        </div>
-
-        <div class="w3-margin-bottom">
-            <label for="content">Content:</label>
+        <div class="w3-margin-bottom" >
+            <label for="content" style="padding-right: 34px">Content:</label>
             <textarea name="content" id="content" required>{{old('content', $project->content)}}</textarea>
 
             @if ($errors->first('content'))
@@ -50,20 +30,33 @@
             @endif
         </div>
 
-        <div class="w3-margin-bottom">
-            <label for="type_id">Type:</label>
-            <select name="type_id" id="type_id">
-                <option></option>
-                @foreach($types as $type)
-                    <option value="{{$type->id}}"
-                        {{$type->id == old('type_id', $project->type_id) ? 'selected' : ''}}>
-                        {{$type->title}}
-                    </option>
-                @endforeach
-            </select>
-            @if ($errors->first('type_id'))
+        <div class="w3-margin-bottom" >
+            <label for="technology" style="padding-right: 10px">Technology:</label>
+            <input type="text" name="technology" id="technology" value="{{old('technology', $project->technology)}}" required>
+
+            @if ($errors->first('technology'))
                 <br>
-                <span class="w3-text-red">{{$errors->first('type_id')}}</span>
+                <span class="w3-text-red">{{$errors->first('technology')}}</span>
+            @endif
+        </div>
+
+        <div class="w3-margin-bottom" >
+            <label for="url1" style="padding-right: 53px">URL 1:</label>
+            <input type="url" name="url1" id="url1" value="{{old('url1', $project->url1)}}">
+
+            @if ($errors->first('url1'))
+                <br>
+                <span class="w3-text-red">{{$errors->first('url1')}}</span>
+            @endif
+        </div>
+
+        <div class="w3-margin-bottom">
+            <label for="url2" style="padding-right: 53px">URL 2:</label>
+            <input type="url" name="url2" id="url2" value="{{old('url2', $project->url2)}}">
+
+            @if ($errors->first('url2'))
+                <br>
+                <span class="w3-text-red">{{$errors->first('url2')}}</span>
             @endif
         </div>
 

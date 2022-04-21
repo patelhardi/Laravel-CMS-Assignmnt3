@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Validation\Rule;
 use App\Models\Project;
+use App\Models\Skill;
 use App\Models\Type;
 
 class ProjectsController extends Controller
@@ -31,18 +32,18 @@ class ProjectsController extends Controller
 
         $attributes = request()->validate([
             'title' => 'required',
-            'slug' => 'required|unique:projects|regex:/^[A-z\-]+$/',
-            'url' => 'nullable|url',
             'content' => 'required',
-            'type_id' => 'required',
+            'technology' => 'required',
+            'url1' => 'nullable|url',
+            'url2' => 'nullable|url',
         ]);
 
         $project = new Project();
         $project->title = $attributes['title'];
-        $project->slug = $attributes['slug'];
-        $project->url = $attributes['url'];
         $project->content = $attributes['content'];
-        $project->type_id = $attributes['type_id'];
+        $project->technology = $attributes['technology'];
+        $project->url1 = $attributes['url1'];
+        $project->url2 = $attributes['url2'];
         $project->user_id = Auth::user()->id;
         $project->save();
 
@@ -63,21 +64,17 @@ class ProjectsController extends Controller
 
         $attributes = request()->validate([
             'title' => 'required',
-            'slug' => [
-                'required',
-                Rule::unique('projects')->ignore($project->id),
-                'regex:/^[A-z\-]+$/',
-            ],
-            'url' => 'nullable|url',
             'content' => 'required',
-            'type_id' => 'required',
+            'technology' => 'required',
+            'url1' => 'nullable|url',
+            'url2' => 'nullable|url',
         ]);
 
         $project->title = $attributes['title'];
-        $project->slug = $attributes['slug'];
-        $project->url = $attributes['url'];
         $project->content = $attributes['content'];
-        $project->type_id = $attributes['type_id'];
+        $project->technology = $attributes['technology'];
+        $project->url1 = $attributes['url1'];
+        $project->url2 = $attributes['url2'];
         $project->save();
 
         return redirect('/console/projects/list')

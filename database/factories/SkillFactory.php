@@ -2,12 +2,11 @@
 
 namespace Database\Factories;
 
-use App\Models\User;
-use App\Models\Type;
 use Illuminate\Database\Eloquent\Factories\Factory;
+use App\Models\User;
 use Illuminate\Support\Str;
 
-class ProjectFactory extends Factory
+class SkillFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -17,14 +16,11 @@ class ProjectFactory extends Factory
     public function definition()
     {
         return [
+            //
             'title' => $this->faker->sentence,
-            'content' => $this->faker->paragraph,
-            'technology' => $this->faker->word,
-            'url1' => $this->faker->url,
-            'url2' => $this->faker->url,
+            // 'percent' => $this->faker->word,
+            'icon' => $this->faker->word,
             'user_id' => User::all()->random(),
-            // 'type_id' => Type::all()->random(),
         ];
     }
-
 }

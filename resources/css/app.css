@@ -2,5 +2,11 @@
 
 body {
     font-family: 'Quicksand', sans-serif;
-    background-color: aquamarine;
+    background-color: #ffffff;
+}
+
+.new-footer {
+    text-align: center;
+    color: #ffffff;
+    background-color: #363636;
 }
