@@ -6,7 +6,7 @@
 
     <h2>Manage Users</h2>
 
-    <table class="w3-table w3-stripped w3-bordered w3-margin-bottom">
+    <table class="w3-table w3-stripped w3-bordered w3-margin-bottom" style="background-color: #ffffff">
         <tr class="w3-red">
             <th>Name</th>
             <th>Email</th>

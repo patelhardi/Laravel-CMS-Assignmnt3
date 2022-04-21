@@ -6,7 +6,7 @@
 
     <h2>Manage Headers</h2>
 
-    <table class="w3-table w3-stripped w3-bordered w3-margin-bottom">
+    <table class="w3-table w3-stripped w3-bordered w3-margin-bottom" style="background-color: #ffffff">
         <tr class="w3-red">
             <th>Title</th>
             <th>URL</th>

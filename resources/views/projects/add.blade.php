@@ -20,29 +20,10 @@
             @endif
         </div>
 
-        <div class="w3-margin-bottom">
-            <label for="url">URL:</label>
-            <input type="url" name="url" id="url" value="{{old('url')}}">
-
-            @if ($errors->first('url'))
-                <br>
-                <span class="w3-text-red">{{$errors->first('url')}}</span>
-            @endif
-        </div>
-
-        <div class="w3-margin-bottom">
-            <label for="slug">Slug:</label>
-            <input type="text" name="slug" id="slug" value="{{old('slug')}}" required>
-
-            @if ($errors->first('slug'))
-                <br>
-                <span class="w3-text-red">{{$errors->first('slug')}}</span>
-            @endif
-        </div>
 
         <div class="w3-margin-bottom">
             <label for="content">Content:</label>
-            <textarea name="content" id="content" required>{{old('content')}}</textarea>
+            <input type="text" name="content" id="content" value="{{old('content')}}" required>
 
             @if ($errors->first('content'))
                 <br>
@@ -51,19 +32,32 @@
         </div>
 
         <div class="w3-margin-bottom">
-            <label for="type_id">Type:</label>
-            <select name="type_id" id="type_id">
-                <option></option>
-                @foreach ($types as $type)
-                    <option value="{{$type->id}}"
-                        {{$type->id == old('type_id') ? 'selected' : ''}}>
-                        {{$type->title}}
-                    </option>
-                @endforeach
-            </select>
-            @if ($errors->first('type_id'))
+            <label for="technology">Technology:</label>
+            <input type="text" name="technology" id="technology" value="{{old('technology')}}" required>
+
+            @if ($errors->first('technology'))
                 <br>
-                <span class="w3-text-red">{{$errors->first('type_id')}}</span>
+                <span class="w3-text-red">{{$errors->first('technology')}}</span>
+            @endif
+        </div>
+
+        <div class="w3-margin-bottom">
+            <label for="url">URL 1:</label>
+            <input type="url" name="url1" id="url1" value="{{old('url1')}}">
+
+            @if ($errors->first('url1'))
+                <br>
+                <span class="w3-text-red">{{$errors->first('url1')}}</span>
+            @endif
+        </div>
+
+        <div class="w3-margin-bottom">
+            <label for="url">URL 2:</label>
+            <input type="url" name="url2" id="url2" value="{{old('url2')}}">
+
+            @if ($errors->first('url2'))
+                <br>
+                <span class="w3-text-red">{{$errors->first('url2')}}</span>
             @endif
         </div>
 
