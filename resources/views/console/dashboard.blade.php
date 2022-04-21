@@ -12,14 +12,13 @@
             <a href="/console/abouts/list">Manage About Me</a>
         </div>
         <div class="w3-container w3-teal w3-column w3-margin w3-padding" style="height: 80px; width: 150px; float: left; text-align: center;">
+            <a href="/console/skills/list">Manage Skills</a>
+        </div>
+        <div class="w3-container w3-teal w3-column w3-margin w3-padding" style="height: 80px; width: 150px; float: left; text-align: center;">
             <a href="/console/projects/list">Manage Projects</a>
         </div>
         <div class="w3-container w3-teal w3-column w3-margin w3-padding" style="height: 80px; width: 150px; float: left; text-align: center;">
-<<<<<<< HEAD
-            <a href="/console/skills/list">Manage Skills</a>
-=======
             <a href="/console/contacts/list">Manage Contact Me</a>
->>>>>>> 87edd974a752941c6b4021e76187dc6c91e06a69
         </div>
         <div class="w3-container w3-teal w3-column w3-margin w3-padding" style="height: 80px; width: 150px; float: left; text-align: center;">
             <a href="/console/types/list">Manage Types</a>

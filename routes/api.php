@@ -68,7 +68,6 @@ Route::get('/headers', function(){
     return $headers;
 });
 
-<<<<<<< HEAD
 Route::get('/skills', function(){
     $skills = Skill::all();
     foreach($skills as $key => $skill)
@@ -83,7 +82,7 @@ Route::get('/skills', function(){
     }
     dd($skills);
     return $skills;
-=======
+});
 Route::get('/abouts', function(){
     $abouts = About::all();
     foreach($abouts as $key => $about)
@@ -105,5 +104,4 @@ Route::get('/contacts', function(){
     //dd($contacts);
 
     return $contacts;
->>>>>>> 87edd974a752941c6b4021e76187dc6c91e06a69
 });
