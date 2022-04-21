@@ -8,6 +8,8 @@ use App\Http\Controllers\SkillsController;
 use App\Http\Controllers\TypesController;
 use App\Http\Controllers\UsersController;
 use App\Http\Controllers\HeadersController;
+use App\Http\Controllers\AboutsController;
+use App\Http\Controllers\ContactsController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -68,6 +70,7 @@ Route::get('/console/headers/edit/{header:id}', [HeadersController::class, 'edit
 Route::post('/console/headers/edit/{header:id}', [HeadersController::class, 'edit'])->where('header', '[0-9]+')->middleware('auth');
 Route::get('/console/headers/delete/{header:id}', [HeadersController::class, 'delete'])->where('header', '[0-9]+')->middleware('auth');
 
+<<<<<<< HEAD
 Route::get('/console/skills/list', [SkillsController::class, 'list'])->middleware('auth');
 Route::get('/console/skills/add', [SkillsController::class, 'addForm'])->middleware('auth');
 Route::post('/console/skills/add', [SkillsController::class, 'add'])->middleware('auth');
@@ -76,3 +79,14 @@ Route::post('/console/skills/edit/{skill:id}', [SkillsController::class, 'edit']
 Route::get('/console/skills/delete/{skill:id}', [SkillsController::class, 'delete'])->where('skill', '[0-9]+')->middleware('auth');
 Route::get('/console/skills/image/{skill:id}', [SkillsController::class, 'imageForm'])->where('skill', '[0-9]+')->middleware('auth');
 Route::post('/console/skills/image/{skill:id}', [SkillsController::class, 'image'])->where('skill', '[0-9]+')->middleware('auth');
+=======
+Route::get('/console/abouts/list', [AboutsController::class, 'list'])->middleware('auth');
+Route::get('/console/abouts/edit/{about:id}', [AboutsController::class, 'editForm'])->where('about', '[0-9]+')->middleware('auth');
+Route::post('/console/abouts/edit/{about:id}', [AboutsController::class, 'edit'])->where('about', '[0-9]+')->middleware('auth');
+Route::get('/console/abouts/image/{about:id}', [AboutsController::class, 'imageForm'])->where('about', '[0-9]+')->middleware('auth');
+Route::post('/console/abouts/image/{about:id}', [AboutsController::class, 'image'])->where('about', '[0-9]+')->middleware('auth');
+
+Route::get('/console/contacts/list', [ContactsController::class, 'list'])->middleware('auth');
+Route::get('/console/contacts/edit/{contact:id}', [ContactsController::class, 'editForm'])->where('contact', '[0-9]+')->middleware('auth');
+Route::post('/console/contacts/edit/{contact:id}', [ContactsController::class, 'edit'])->where('contact', '[0-9]+')->middleware('auth');
+>>>>>>> 87edd974a752941c6b4021e76187dc6c91e06a69

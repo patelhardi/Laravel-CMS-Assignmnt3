@@ -8,6 +8,8 @@ use App\Models\Skill;
 use App\Models\Project;
 use App\Models\User;
 use App\Models\Header;
+use App\Models\About;
+use App\Models\Contact;
 
 /*
 |--------------------------------------------------------------------------
@@ -66,6 +68,7 @@ Route::get('/headers', function(){
     return $headers;
 });
 
+<<<<<<< HEAD
 Route::get('/skills', function(){
     $skills = Skill::all();
     foreach($skills as $key => $skill)
@@ -80,4 +83,27 @@ Route::get('/skills', function(){
     }
     dd($skills);
     return $skills;
+=======
+Route::get('/abouts', function(){
+    $abouts = About::all();
+    foreach($abouts as $key => $about)
+    {
+        $abouts[$key]['user'] = User::where('id', $about['user_id'])->first();
+        
+        if($about['image'])
+        {
+            $abouts[$key]['image'] = env('APP_URL').'storage/'.$abouts[$key]['image'];
+        }
+        
+    }
+    dd($abouts);
+    return $abouts;
+});
+
+Route::get('/contacts', function(){
+    $contacts = Contact::all();
+    dd($contacts);
+
+    return $contacts;
+>>>>>>> 87edd974a752941c6b4021e76187dc6c91e06a69
 });
